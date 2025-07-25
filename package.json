@@ -1,0 +1,27 @@
+{
+  "name": "bank-loan-management-system",
+  "version": "1.0.0",
+  "description": "A comprehensive bank loan management system",
+  "main": "server.js",
+  "private": true,
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "bank",
+    "loan",
+    "management",
+    "nodejs",
+    "express",
+    "sqlite"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.21.2",
+    "path": "^0.12.7",
+    "sqlite3": "^5.1.7"
+  }
+}

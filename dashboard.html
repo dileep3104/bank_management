@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Bank Loan Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 id="welcomeMessage">Hello, User!</h1>
+            <p>What would you like to do today?</p>
+        </div>
+
+        <div class="dashboard-grid">
+            <div class="dashboard-card" onclick="navigateTo('/lend')">
+                <div class="card-icon">💰</div>
+                <h3>New Loan</h3>
+                <p>Apply for a new loan with flexible terms and competitive rates</p>
+            </div>
+
+            <div class="dashboard-card" onclick="navigateTo('/payment')">
+                <div class="card-icon">💳</div>
+                <h3>Make Payment</h3>
+                <p>Pay your EMI or make lump sum payments towards your loans</p>
+            </div>
+
+            <div class="dashboard-card" onclick="navigateTo('/ledger')">
+                <div class="card-icon">📋</div>
+                <h3>Transaction History</h3>
+                <p>View detailed transaction history for any of your loans</p>
+            </div>
+
+            <div class="dashboard-card" onclick="navigateTo('/overview')">
+                <div class="card-icon">📊</div>
+                <h3>Account Overview</h3>
+                <p>Get a comprehensive view of all your loans and balances</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <button onclick="navigateTo('/')" class="btn btn-secondary">Change User</button>
+        </div>
+    </div>
+
+    <script src="scripts/dashboard.js"></script>
+</body>
+</html>

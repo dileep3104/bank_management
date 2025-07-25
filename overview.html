@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Overview - Bank Loan Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 id="overviewTitle">Account Overview</h1>
+           
+        </div>
+
+        <div id="overviewContent">
+            <div class="overview-stats">
+                <div class="stat-card">
+                    <h3 id="totalLoans">0</h3>
+                    <p>Total Loans</p>
+                </div>
+                <div class="stat-card">
+                    <h3 id="totalBorrowed">₹0</h3>
+                    <p>Total Borrowed</p>
+                </div>
+                <div class="stat-card">
+                    <h3 id="totalPaid">₹0</h3>
+                    <p>Total Paid</p>
+                </div>
+                <div class="stat-card">
+                    <h3 id="totalRemaining">₹0</h3>
+                    <p>Total Remaining</p>
+                </div>
+            </div>
+
+            <div class="loans-section">
+                <h3>Your Loans</h3>
+                <div id="loansContainer">
+                    <!-- Loans will be populated here -->
+                </div>
+            </div>
+        </div>
+
+        <div id="noLoans" class="empty-state" style="display: none;">
+            <p>You don't have any loans yet.</p>
+            <button onclick="navigateTo('/lend')" class="btn btn-primary">Apply for a Loan</button>
+        </div>
+    </div>
+
+    <script src="scripts/overview.js"></script>
+</body>
+</html>

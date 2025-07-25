@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make Payment - Bank Loan Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Make Loan Payment</h1>
+           
+        </div>
+
+        <div class="form-card">
+            <form id="paymentForm">
+                <div class="form-grid">
+                    <div class="input-group">
+                        <label for="loanId">Loan ID:</label>
+                        <input type="number" id="loanId" name="loanId" required>
+                        <button type="button" onclick="fetchLoanDetails()" class="btn btn-small">Get Loan Details</button>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="paymentAmount">Payment Amount (₹):</label>
+                        <input type="number" id="paymentAmount" name="paymentAmount" step="0.01" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="paymentType">Payment Type:</label>
+                        <select id="paymentType" name="paymentType" required>
+                            <option value="">Select Payment Type</option>
+                            <option value="EMI">Regular EMI</option>
+                            <option value="LUMP_SUM">Lump Sum Payment</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div id="loanDetails" class="loan-details" style="display: none;">
+                    <h3>Current Loan Details</h3>
+                    <div class="details-grid">
+                        <div class="detail-item">
+                            <span>Monthly EMI:</span>
+                            <span id="currentEMI">₹0</span>
+                        </div>
+                        <div class="detail-item">
+                            <span>Remaining Balance:</span>
+                            <span id="currentBalance">₹0</span>
+                        </div>
+                        <div class="detail-item">
+                            <span>EMIs Left:</span>
+                            <span id="emisLeft">0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Make Payment</button>
+            </form>
+        </div>
+
+        <div id="paymentResult" class="result-card" style="display: none;">
+            <h3>Payment Successful!</h3>
+            <div class="result-details">
+                <p><strong>Amount Paid:</strong> ₹<span id="resultAmount"></span></p>
+                <p><strong>Remaining Balance:</strong> ₹<span id="resultBalance"></span></p>
+                <p><strong>EMIs Left:</strong> <span id="resultEmisLeft"></span></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/payment.js"></script>
+</body>
+</html>
